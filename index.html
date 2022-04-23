@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Kuisti Bingo</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="topbar">
+        <div class="imageContainer">
+          <img src="https://kuisti.org/static/media/kuisti-logo.8e777281ab4008ef324b9bfacbdd3166.svg" alt="logo" class="logo">
+        </div>
+        <div class="titleContainer">
+          <img src="https://kuisti.org/static/media/kuisti-text.4fc2f934a3e174cfec92f2eec947f01c.svg" alt="kuisti" class="kuisti">
+          <p>Bingo</p>
+        </div>
+      </div>
+      <div id="gameContainer">
+        <div id="joinGame">
+          <div class="joinGameTitle">
+            Join Game
+          </div>
+          <div class="joinGameInput">
+            <input type="text" id="userNameInput" placeholder="Name">
+          </div>
+          <div class="joinGameButton">
+            <button id="joinGameButton">Join</button>
+          </div>
+        </div>
+        <div id="game">
+          <div id="bingoCells">
+            
+          </div>
+        </div>
+        <div id="loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+html, body, #root {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color:#3C5670;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.imageContainer {
+  height: 100%;
+  position: relative;
+}
+
+.imageContainer img {
+  position: relative;
+  height: 100%;
+}
+
+.titleContainer {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleContainer img {
+  height: 20%;
+  position: relative;
+}
+
+.titleContainer p {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#gameContainer {
+  height: 800px;
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#joinGame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  display: none;
+}
+
+
+.joinGameTitle {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.joinGameInput, .joinGameButton {
+  width: 100%;
+  position: relative;
+}
+
+#userNameInput {
+  /*border-bottom: 2px solid #000;*/
+  max-width: 400px;
+  width: 80%;
+  height: 60px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  background: #fff;
+  border-radius: 16px;
+  border: solid 2px #3C5670;
+  padding-left: 10px;
+}
+
+#joinGameButton {
+  max-width: 400px;
+  width: 80%;
+  height: 60px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  background: #3C5670;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 16px;
+}
+
+#game {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#game .column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+}
+.letter {
+  font-size: 60px;
+  font-weight: 700;
+  color: #3C5670;
+}
+
+#game .column .cell {
+  font-size: 20px;
+  font-weight: 700;
+  flex: 1;
+  border: solid 2px #000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bingoCells {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* loader */
+
+#loader {
+  display: none;
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #3C5670;;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
