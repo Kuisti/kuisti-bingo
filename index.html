@@ -23,13 +23,21 @@
             <input type="text" id="userNameInput" placeholder="Name">
           </div>
           <div class="joinGameButton">
-            <button id="joinGameButton">Join</button>
+            <button id="joinGameButton" onclick="createUser();">Join</button>
           </div>
         </div>
         <div id="game">
           <div id="bingoCells">
-            
           </div>
+        </div>
+        <div id="noGameRunning">
+          <p>No game currently running :(</p>
+        </div>
+        <div id="thanksForPlaying">
+          <p>Thanks for playing!</p>
+        </div>
+        <div id="techDifficulties">
+          <p>Some technical difficulties with the back-end! :(</p>
         </div>
         <div id="loader" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
       </div>

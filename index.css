@@ -70,7 +70,6 @@ html, body, #root {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  display: none;
 }
 
 
@@ -115,6 +114,26 @@ html, body, #root {
   font-size: 20px;
   font-weight: 700;
   border-radius: 16px;
+}
+
+.disabled {
+  display: none !important;
+}
+
+#noGameRunning, #thanksForPlaying, #techDifficulties {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#noGameRunning p, #thanksForPlaying p, #techDifficulties p {
+  font-size: 40px;
+  font-weight: 700;
+  color: #3C5670;
 }
 
 #game {
@@ -166,7 +185,7 @@ html, body, #root {
 /* loader */
 
 #loader {
-  display: none;
+
 }
 .lds-ellipsis {
   display: inline-block;
