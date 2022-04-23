@@ -37,7 +37,14 @@ const renderColumn = (letter) => {
   column.appendChild(letterElem)
 
   for (let i = 0; i < col.length; i++) {
-    const cell = document.createElement("div")
+    const cell = document.createElement("button")
+    cell.onclick = () => {
+      if (cell.classList.contains("selected")) {
+        cell.classList.remove("selected")
+      } else {
+        cell.classList.add("selected")
+      }
+    }
     cell.classList.add("cell")
     let num = col[i]
     if (num == 100) {

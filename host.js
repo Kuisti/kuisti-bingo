@@ -53,4 +53,26 @@ const endGame = () => {
   }))
 }
 
+const numbers = {
+  b: [],
+  i: [],
+  n: [],
+  g: [],
+  o: []
+}
+
+const addNumber = () => {
+  const allowedLetters = ['b', 'i', 'n', 'g', 'o']
+  const letter = document.getElementById("letterInput").value.trim().toLowerCase()
+  const number = document.getElementById("numberInput").value
+
+  if (allowedLetters.includes(letter) && number !== null) {
+    numbers[letter].push(number)
+    document.getElementById("letterInput").value = ""
+    document.getElementById("numberInput").value = null
+    const elem = document.getElementById(letter+"Numbers")
+    elem.innerHTML = numbers[letter].sort().join(", ")
+  }
+}
+
 connectToWs()

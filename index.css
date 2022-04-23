@@ -183,6 +183,13 @@ html, body, #root {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: transparent;
+  transition: 0.2s ease-in-out;
+}
+
+#game .column .cell.selected {
+  background: #3C5670;
+  color: #fff;
 }
 
 #bingoCells {
@@ -200,6 +207,7 @@ html, body, #root {
 #loader {
 
 }
+
 .lds-ellipsis {
   display: inline-block;
   position: relative;
