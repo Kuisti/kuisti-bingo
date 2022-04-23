@@ -8,6 +8,19 @@ html, body, #root {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@keyframes rootEntry {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#root {
+  animation: rootEntry 0.7s ease-in-out forwards;
+}
+
 .topbar {
   display: flex;
   flex-direction: row;

@@ -173,5 +173,11 @@ const getUserKey = () => {
   return userKey
 }
 
-connectToWs(getUserKey())
-showLoader()
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const root = document.getElementById("root")
+  root.style.display = "block"
+
+  connectToWs(getUserKey())
+  showLoader()
+})
